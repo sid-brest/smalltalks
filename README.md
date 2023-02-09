@@ -1,1 +1,3 @@
 # smalltalks
+
+owner Dzmitry Struneusky
