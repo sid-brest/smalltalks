@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    function getRandomQuote() {
+      $.ajax({
+        url: "quotes.txt",
+        success: function(data) {
+          var quotes = data.split("\n");
+          var quote = quotes[Math.floor(Math.random() * quotes.length)];
+          $("#quote").text(quote);
+        },
+        dataType: "text"
+      });
+    }
+  </script>
+</head>
+<body>
+  <button onclick="getRandomQuote()">Show Random Quote</button>
+  <p id="quote"></p>
+</body>
+</html>
